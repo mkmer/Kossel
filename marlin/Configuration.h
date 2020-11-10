@@ -83,7 +83,7 @@
 #define DELTA_SEGMENTS_PER_SECOND 160
 
 // Center-to-center distance of the holes in the diagonal push rods
-#define DELTA_DIAGONAL_ROD 216// mm 218
+#define DELTA_DIAGONAL_ROD 216.648// mm 218
 
 // Horizontal offset from middle of printer to smooth rod center.
 #define DELTA_SMOOTH_ROD_OFFSET 148// mm
@@ -311,7 +311,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false;
 #define INVERT_X_DIR true    // for Mendel set to false, for Orca set to true
 #define INVERT_Y_DIR true    // for Mendel set to true, for Orca set to false
 #define INVERT_Z_DIR true    // for Mendel set to false, for Orca set to true
-#define INVERT_E0_DIR false   // for direct drive extruder v9 set to true, for geared extruder set to false
+#define INVERT_E0_DIR true   // for direct drive extruder v9 set to true, for geared extruder set to false
 #define INVERT_E1_DIR false   // for direct drive extruder v9 set to true, for geared extruder set to false
 #define INVERT_E2_DIR false   // for direct drive extruder v9 set to true, for geared extruder set to false
 
@@ -388,7 +388,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false;
 // For deltabots this means top and center of the cartesian print volume.
 #define MANUAL_X_HOME_POS 0
 #define MANUAL_Y_HOME_POS 0
-#define MANUAL_Z_HOME_POS 268//306.6 // For delta: Distance between nozzle and print surface after homing.
+#define MANUAL_Z_HOME_POS 267.8//306.6 // For delta: Distance between nozzle and print surface after homing.
 //Because there will be differences for each machine installation, need your own measurement,after setting finished remember to keep Modify.
 
 //// MOVEMENT SETTINGS
@@ -403,7 +403,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false;
 #define XYZ_STEPS (XYZ_FULL_STEPS_PER_ROTATION * XYZ_MICROSTEPS / double(XYZ_BELT_PITCH) / double(XYZ_PULLEY_TEETH))
 //This is the formula: number of subdivisions number * stepping stepper motor driver / belt tooth spacing / synchronous tooth number
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {XYZ_STEPS, XYZ_STEPS, XYZ_STEPS, 150}   //Extruder amount
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {XYZ_STEPS, XYZ_STEPS, XYZ_STEPS, 96.5}   //Extruder amount
 #define DEFAULT_MAX_FEEDRATE          {200, 200, 200, 200}   
 #define DEFAULT_MAX_ACCELERATION      {3000,3000,3000,3000}    
 
