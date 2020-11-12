@@ -3256,17 +3256,17 @@ void clamp_to_software_endstops(float target[3])
 }
 
 #ifdef DELTA
-void calculate_delta(float cartesian[3])
+void calculate_delta(float cartesian[3]) //MJK mods for my machine
 {
-  delta[X_AXIS] = sqrt(DELTA_DIAGONAL_ROD_2
+  delta[X_AXIS] = sqrt((DELTA_DIAGONAL_ROD_2*59.57/60.0)
                        - sq(DELTA_TOWER1_X-cartesian[X_AXIS])
                        - sq(DELTA_TOWER1_Y-cartesian[Y_AXIS])
                        ) + cartesian[Z_AXIS];
-  delta[Y_AXIS] = sqrt(DELTA_DIAGONAL_ROD_2
+  delta[Y_AXIS] = sqrt((DELTA_DIAGONAL_ROD_2*60.33/60.0)
                        - sq(DELTA_TOWER2_X-cartesian[X_AXIS])
                        - sq(DELTA_TOWER2_Y-cartesian[Y_AXIS])
                        ) + cartesian[Z_AXIS];
-  delta[Z_AXIS] = sqrt(DELTA_DIAGONAL_ROD_2
+  delta[Z_AXIS] = sqrt((DELTA_DIAGONAL_ROD_2 * 59.72/60.0)
                        - sq(DELTA_TOWER3_X-cartesian[X_AXIS])
                        - sq(DELTA_TOWER3_Y-cartesian[Y_AXIS])
                        ) + cartesian[Z_AXIS];
@@ -3709,4 +3709,3 @@ bool setTargetedHotend(int code){
   }
   return false;
 }
-

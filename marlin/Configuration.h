@@ -83,7 +83,7 @@
 #define DELTA_SEGMENTS_PER_SECOND 160
 
 // Center-to-center distance of the holes in the diagonal push rods
-#define DELTA_DIAGONAL_ROD 214.871// mm 218
+#define DELTA_DIAGONAL_ROD 215.5// mm 218
 
 // Horizontal offset from middle of printer to smooth rod center.
 #define DELTA_SMOOTH_ROD_OFFSET 147.5// mm
@@ -403,7 +403,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false;
 #define XYZ_STEPS (XYZ_FULL_STEPS_PER_ROTATION * XYZ_MICROSTEPS / double(XYZ_BELT_PITCH) / double(XYZ_PULLEY_TEETH))
 //This is the formula: number of subdivisions number * stepping stepper motor driver / belt tooth spacing / synchronous tooth number
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {XYZ_STEPS, XYZ_STEPS, XYZ_STEPS, 90}   //96.4?Extruder amount
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {XYZ_STEPS, XYZ_STEPS, XYZ_STEPS, 100}   //96.4?Extruder amount
 #define DEFAULT_MAX_FEEDRATE          {200, 200, 200, 200}   
 #define DEFAULT_MAX_ACCELERATION      {3000,3000,3000,3000}    
 
